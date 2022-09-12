@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+     <label for="year">Input year</label> <br>
+
+     <input type="number" name="year" id="year">
+
+     <p id="text"></p>
+
+     <button onclick="check()">Check</button>
+
+</body>
+</html>
+
+<script>
+
+     function check() {
+
+          let year = +document.getElementById("year").value;
+
+          result = parseInt(year/100) + 1;
+
+          document.getElementById("text").innerHTML = "Năm " + year + " thuộc thế kỷ: " + result;
+          
+     }
+</script>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+     <label for="number1">Input number 1</label> <br>
+
+     <input type="number" name="number1" id="number1"> <br>
+
+     <label for="number2">Input number 2</label> <br>
+
+     <input type="number" name="number2" id="number2">
+
+     <p id="text1"></p>
+
+     <p id="text2"></p>
+
+     <button onclick="check()">Check</button>
+     
+
+</body>
+</html>
+
+<script>
+
+     function check() {
+
+          let num1 = +document.getElementById("number1").value;
+          
+          let num2 = +document.getElementById("number2").value;
+
+          let square = Math.pow(num1,2); //binh phuong
+
+          let exponent = Math.pow(num1,num2); //so mu
+
+          document.getElementById("text1").innerHTML = square;
+          
+          document.getElementById("text2").innerHTML = exponent;
+
+     }
+</script>

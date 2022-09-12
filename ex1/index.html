@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+     <label for="number">Nhập cạnh hình vuông</label> <br>
+
+     <input type="number" name="number" id="number">
+
+     <p id="textC"></p>
+
+     <p id="textS"></p>
+
+     <button onclick="check()">Check</button>
+
+</body>
+</html>
+
+<script>
+
+     function check() {
+
+          let number = +document.getElementById("number").value;
+
+          let c = number * 4;
+
+          let s = number * number;
+
+          document.getElementById("textC").innerHTML = "Chu vi: " + c;
+
+          document.getElementById("textS").innerHTML = "Diện tích: " + s;
+     }
+</script>

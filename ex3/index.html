@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <label for="number1">Input number 1</label> <br>
+
+     <input type="number" name="number1" id="number1"> <br>
+
+     <label for="number2">Input number 2</label> <br>
+
+     <input type="number" name="number2" id="number2">
+
+     <p id="text"></p>
+
+     <button onclick="check()">Check</button>
+
+</body>
+</html>
+
+<script>
+
+     function check() {
+
+          let num1 = +document.getElementById("number1").value;
+
+          let num2 = +document.getElementById("number2").value;
+
+          let sum = 0;
+
+          if (num1 < num2) {
+               for (let i = num1; i <= num2;i++) {
+                    sum = sum + i;
+               }
+          } else {
+               for (let i = num1; i >= num2; i--) {
+                    sum = sum + i;
+               }
+          }
+
+          document.getElementById("text").innerHTML = "Tổng các số từ " + num1 + " đến " + num2 + ": " + sum;
+     }
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     
+     <label for="number1">Input number 1</label> <br>
+
+     <input type="number" name="number1" id="number1"> <br>
+
+     <label for="number2">Input number 2</label> <br>
+
+     <input type="number" name="number2" id="number2"> <br>
+
+     <label for="number3">Input number 3</label> <br>
+
+     <input type="number" name="number2" id="number3">
+
+     <p id="text"></p>
+
+     <button onclick="check()">Check</button>
+
+</body>
+</html>
+
+<script>
+
+     function check() {
+
+          let number1 = +document.getElementById("number1").value;
+          let number2 = +document.getElementById("number2").value;
+          let number3 = +document.getElementById("number3").value;
+
+          let result;
+
+          if (number1+number2>number3 && number2+number3>number1 && number3+number1>number2) {
+               if (number1==number2 && number2==number3) {
+                    result = "Tam giác đều";
+               } else if ((number1==number2) || (number2==number3) || (number3==number1)) {
+                    result = "Tam giác cân";
+               } else if ((Math.pow(number1,2) == Math.pow(number2,2) + Math.pow(number3,2)) || (Math.pow(number2,2) == Math.pow(number3,2) + Math.pow(number1,2)) ||(Math.pow(number3,2) == Math.pow(number2,2) + Math.pow(number1,2))) {
+                    result = "Tam giác vuông";
+               } else {
+                    result = "Tam giác thường";
+               }
+          } else {
+               result = "Không phải 3 cạnh của tam giác";
+          }
+
+          document.getElementById("text").innerHTML = result;
+     }
+</script>
